@@ -1,0 +1,28 @@
+.site-nav {
+  font-family: 'libel_suitregular';
+  box-shadow: 0 6px 6px -6px rgba(0,0,0,0.05);
+  
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+    margin-right: 150px;
+
+    img {
+      position: absolute;
+      bottom: 16px;
+    }
+  }
+}
+
+.wave-before-navbar {
+  svg {
+    height: 70px;
+    width: 100%;
+
+    .cls-1 {
+      fill: white;
+    }
+  }
+}
