@@ -1,9 +1,30 @@
 .site-nav {
   font-family: 'libel_suitregular';
   box-shadow: 0 6px 6px -6px rgba(0,0,0,0.05);
+
+  .dropdown {
+    position: initial;
+
+    .dropdown-menu.show {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      top: unset;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      opacity: .9;
+      padding: 16px;
+
+      .dropdown-item {
+        width: auto;
+      }
+    }
+  }
   
   .nav-link {
-    font-size: 16px;
+    font-size: 20px;
+    margin-right: 10px;
   }
 
   .navbar-brand {

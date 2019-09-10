@@ -37,3 +37,10 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
 }
+
+.bg-waves {
+  background-image: url('/images/bg-waves.png');
+  background-size: cover;
+  background-position-y: bottom;
+}
+
