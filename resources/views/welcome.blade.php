@@ -19,7 +19,7 @@
                 <h1>PRODUTO</h1>
                 <p class="lead">Chamada</p>
                 <p>Descrição</p>
-                <a href="#" class="btn btn-outline-light rounded-pill">Saiba mais</a>
+                <a href="#" class="px-5 btn btn-outline-light rounded-pill">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
               </div>
               <p class="lead text-secondary">Como podemos te ajudar?</p>
               <p class="mb-4 text-secondary">Processos intrapsíquicos, crescimento profissional, amadurecimento das relações afetivas e interpessoais, aprimoramento do capital humano nas organizações privadas, públicas e sociais.</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill">Fale conosco</a>
+              <a href="#" class="px-5 btn btn-outline-primary rounded-pill">Fale conosco</a>
             </div>
             <div class="col-md-6 offset-1">
               <img src="/images/illustration.png" class="img-fluid my-3"/>
@@ -217,7 +217,7 @@
               <div class="form-group">
                 <textarea class="form-control" id="mensagem" placeholder="Mensagem"></textarea>
               </div>
-              <button type="submit" class="btn btn-warning rounded-pill">Enviar</button>
+              <button type="submit" class="px-5 btn btn-warning rounded-pill">Enviar</button>
             </form>
           </div>
         </div>
