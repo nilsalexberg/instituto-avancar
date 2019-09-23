@@ -70,7 +70,7 @@ class PostController extends AdminController
         $form->text('title', __('Title'));
         $form->text('summary', __('Summary'));
         $form->image('image', __('Image'));
-        $form->textarea('content', __('Content'));
+        $form->editor('content', __('Content'));
 
         return $form;
     }
