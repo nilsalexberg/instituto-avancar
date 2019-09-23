@@ -27,7 +27,7 @@ class BannerController extends AdminController
         $grid = new Grid(new Banner);
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image();
         $grid->column('title', __('Title'));
         $grid->column('subtitle', __('Subtitle'));
         $grid->column('description', __('Description'));

@@ -50,7 +50,7 @@ class PostController extends AdminController
         $show->field('id', __('Id'));
         $show->field('title', __('Title'));
         $show->field('summary', __('Summary'));
-        $show->field('image', __('Image'));
+        $show->field('image', __('Image'))->image();
         $show->field('content', __('Content'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
