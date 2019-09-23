@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+Route::get('/quem-somos', function () { return view('about'); });
+
+Route::get('/servicos/para-voce', function () { return view('servicos.para-voce'); });
+Route::get('/servicos/para-psicologos', function () { return view('servicos.para-psicologos'); });
+Route::get('/servicos/para-empresas', function () { return view('servicos.para-empresas'); });
+Route::get('/servicos/para-terceiro-setor', function () { return view('servicos.para-terceiro-setor'); });
