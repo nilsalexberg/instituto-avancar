@@ -58,7 +58,7 @@
           <div class="text-center">
             <img src="{{ $partner->image }}" class="rounded-circle d-block mx-auto mb-2">
             <h4>{{ $partner->name }}</h4>
-            <p class="role">{{ $partner->role }}</p>
+            <p class="text-capitalize">{{ $partner->role }}</p>
           </div>
         @endforeach
       </div>

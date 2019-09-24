@@ -5,8 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
     
     <script src="/js/app.js"></script>
+    <script src="/fontawesome/js/all.js"></script>
 		<title>Avançar</title>
 	</head>
 	<body>
@@ -70,10 +72,10 @@
                 O que fazemos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="servicos/para-voce">Para você</a>
-                <a class="dropdown-item" href="servicos/para-psicologos">Para psicólogos</a>
-                <a class="dropdown-item" href="servicos/para-empresas">Para empresas</a>
-                <a class="dropdown-item" href="servicos/para-terceiro-setor">Para o terceiro setor</a>
+                <a class="dropdown-item" href="/servicos/para-voce">Para você</a>
+                <a class="dropdown-item" href="/servicos/para-psicologos">Para psicólogos</a>
+                <a class="dropdown-item" href="/servicos/para-empresas">Para empresas</a>
+                <a class="dropdown-item" href="/servicos/para-terceiro-setor">Para o terceiro setor</a>
               </div>
             </li>
             <li class="nav-item {{ Route::current()->uri == 'parceiros' ? 'active' : '' }}">

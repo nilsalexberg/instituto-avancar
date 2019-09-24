@@ -19,6 +19,9 @@ Route::get('/', function () {
   ]);
 });
 
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{slug}', 'BlogController@post');
+
 Route::get('/quem-somos', function () { return view('about'); });
 
 Route::get('/servicos/para-voce', function () { return view('servicos.para-voce'); });

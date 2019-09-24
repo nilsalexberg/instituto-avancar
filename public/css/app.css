@@ -10759,8 +10759,13 @@ body {
   min-height: 72px;
 }
 
-.home-partners .role {
-  text-transform: capitalize;
+.blog-index .media img {
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.blog-post .recent img {
+  width: 100%;
 }
 
 h1,
