@@ -18,7 +18,7 @@
 
     <div class="d-flex justify-content-between mt-5">
       @if ($page > 1)
-        <a class="btn btn-outline-primary" href="?page={{ $page - 1 }}">
+        <a class="btn btn-outline-primary rounded-pill" href="?page={{ $page - 1 }}">
           <i class="fas fa-chevron-left mr-1"></i> Anterior
         </a>
       @else
@@ -28,7 +28,7 @@
       <div>Página {{ $page }}</div>
 
       @if (count($posts) == 10)
-        <a class="btn btn-outline-primary" href="?page={{ $page + 1 }}">
+        <a class="btn btn-outline-primary rounded-pill" href="?page={{ $page + 1 }}">
           Próxima <i class="fas fa-chevron-right ml-1"></i>
         </a>
       @else
