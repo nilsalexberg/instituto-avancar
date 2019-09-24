@@ -19,6 +19,12 @@ Route::get('/', function () {
   ]);
 });
 
+Route::get('/parceiros', function () { 
+  return view('partners')->with([
+    'partners' => \App\Partner::all(),
+  ]);
+});
+
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@post');
 
