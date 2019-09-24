@@ -38,6 +38,11 @@
 }
 
 .wave-before-navbar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  transform: translateY(-100%);
+  
   svg {
     height: 70px;
     width: 100%;

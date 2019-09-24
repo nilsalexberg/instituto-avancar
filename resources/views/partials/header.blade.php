@@ -10,25 +10,43 @@
 		<title>Avançar</title>
 	</head>
 	<body>
-		<div class="site-header bg-dark pt-5" style="background-image: url('/images/header-1.png')">
-      <div class="container {{ !empty($bigHeader) ? 'my-5' : '' }}">
-        <div class="row">
-          <div class="col-md-4 offset-md-8">
-            <div class="card {{ !empty($bigHeader) ? 'my-5' : '' }}">
-              <div class="card-body text-white">
-                <h1>PRODUTO</h1>
-                <p class="lead">Chamada</p>
-                <p>Descrição</p>
-                <a href="#" class="px-5 btn btn-outline-light rounded-pill">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="site-header bg-dark">
 
-      <div class="wave-before-navbar mt-5">
-        @include('svg.wave-3')
-      </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            @foreach (\App\Banner::all() as $key => $item)
+              <div class="carousel-item py-4 {{ $key == 0 ? 'active' : '' }} {{ !empty($bigHeader) ? 'big-header' : 'small-header' }}" style="background-image: url('{{ $item->image }}')">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                      <div class="card mb-5">
+                        <div class="card-body text-white">
+                          <h1>{{ $item->title }}</h1>
+                          <p class="lead">{{ $item->subtitle }}</p>
+                          <p>{{ $item->description }}</p>
+                          <a href="{{ $item->link }}" class="px-5 btn btn-outline-light rounded-pill">Saiba mais</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            @endforeach
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+    <div class="wave-before-navbar">
+      @include('svg.wave-3')
     </div>
 
     <nav class="site-nav navbar navbar-expand-lg navbar-light bg-white">

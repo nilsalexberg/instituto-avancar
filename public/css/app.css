@@ -10652,8 +10652,27 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.site-header {
+.site-header .carousel-item {
   background-size: cover;
+}
+
+.site-header .carousel-item.active,
+.site-header .carousel-item.carousel-item-right,
+.site-header .carousel-item.carousel-item-left,
+.site-header .carousel-item.carousel-item-next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site-header .big-header {
+  max-height: 80vh;
+  min-height: 80vh;
+}
+
+.site-header .small-header {
+  max-height: 60vh;
+  min-height: 60vh;
 }
 
 .site-header .card {
@@ -10710,6 +10729,13 @@ body {
 .site-nav .navbar-brand img {
   position: absolute;
   bottom: 16px;
+}
+
+.wave-before-navbar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  transform: translateY(-100%);
 }
 
 .wave-before-navbar svg {

@@ -1,5 +1,23 @@
 .site-header {
-  background-size: cover;
+  .carousel-item {
+    background-size: cover;
+    
+    &.active, &.carousel-item-right, &.carousel-item-left, &.carousel-item-next {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .big-header {
+    max-height: 80vh;
+    min-height: 80vh;
+  }
+
+  .small-header {
+    max-height: 60vh;
+    min-height: 60vh;
+  }
   
   .card {
     background: rgba(0,0,0,0.5);
