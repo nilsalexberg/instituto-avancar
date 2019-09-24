@@ -53,22 +53,14 @@
     <div class="container">
       <h1 class="mb-4">Nossos parceiros</h1>
 
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="https://placeimg.com/180/180/people?1" class="rounded-circle">
-          <h4>Nome</h4>
-          <p>Função</p>
-        </div>
-        <div class="col-md-4">
-          <img src="https://placeimg.com/180/180/people?2" class="rounded-circle">
-          <h4>Nome</h4>
-          <p>Função</p>
-        </div>
-        <div class="col-md-4">
-          <img src="https://placeimg.com/180/180/people?3" class="rounded-circle">
-          <h4>Nome</h4>
-          <p>Função</p>
-        </div>
+      <div class="home-partners">
+        @foreach ($partners as $partner)
+          <div class="text-center">
+            <img src="{{ $partner->image }}" class="rounded-circle d-block mx-auto mb-2">
+            <h4>{{ $partner->name }}</h4>
+            <p class="role">{{ $partner->role }}</p>
+          </div>
+        @endforeach
       </div>
     </div>
 
@@ -79,42 +71,45 @@
 
   <div class="container pt-5 pb-4">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 home-posts">
         <h2 class="mb-5 text-secondary">Blog</h2>
-        <div class="media mb-4">
-          <img src="https://placeimg.com/114/96/people?1" class="align-self-center mr-3" alt="...">
-          <div class="media-body">
-            <h5 class="mt-0">Center-aligned media</h5>
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        @foreach ($posts as $post)
+          <div class="media mb-4">
+            <img src="{{ $post->image }}" class="align-self-center mr-3">
+            <div class="media-body">
+              <h5 class="mt-0">{{ $post->title }}</h5>
+              <p class="mb-0">{{ $post->summary }}</p>
+            </div>
           </div>
-        </div>
-        <div class="media mb-4">
-          <img src="https://placeimg.com/114/96/people?2" class="align-self-center mr-3" alt="...">
-          <div class="media-body">
-            <h5 class="mt-0">Center-aligned media</h5>
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
+        @endforeach
       </div>
-      <div class="col-md-6">
+
+      <div class="col-md-6 home-testimonials">
         <h2 class="mb-5 text-secondary">Depoimentos</h2>
-        <div class="media mb-4">
-          <img src="https://placeimg.com/72/72/people?1" class="align-self-center mr-3 rounded-circle" alt="...">
-          <div class="media-body">
-            <h5 class="mt-0">Center-aligned media</h5>
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        @foreach ($testimonials as $testimonial)
+          <div class="media mb-4">
+            <img src="{{ $testimonial->image }}" class="align-self-center mr-3 rounded-circle">
+            <div class="media-body">
+              <h5 class="mt-0">{{ $testimonial->name }}</h5>
+              <p class="mb-0">{{ $testimonial->content }}</p>
+            </div>
           </div>
-        </div>
-        <div class="media mb-4">
-          <img src="https://placeimg.com/72/72/people?2" class="align-self-center mr-3 rounded-circle" alt="...">
-          <div class="media-body">
-            <h5 class="mt-0">Center-aligned media</h5>
-            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div>
 </div>
+
+<link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+<script type="text/javascript" src="/slick/slick.min.js"></script>
+<script>
+$('.home-partners').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+});
+</script>
 
 @include('partials.footer')

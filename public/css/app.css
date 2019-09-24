@@ -10747,6 +10747,22 @@ body {
   fill: white;
 }
 
+.home-posts .media img {
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.home-testimonials .media img {
+  max-width: 72px;
+  min-width: 72px;
+  max-height: 72px;
+  min-height: 72px;
+}
+
+.home-partners .role {
+  text-transform: capitalize;
+}
+
 h1,
 h2,
 h3,

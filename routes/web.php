@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+Route::get('/', function () { 
+  return view('welcome')->with([
+    'posts' => \App\Post::orderBy('id', 'desc')->limit(2)->get(),
+    'testimonials' => \App\Testimonial::orderBy('id', 'desc')->limit(2)->get(),
+    'partners' => \App\Partner::all(),
+  ]);
+});
+
 Route::get('/quem-somos', function () { return view('about'); });
 
 Route::get('/servicos/para-voce', function () { return view('servicos.para-voce'); });
