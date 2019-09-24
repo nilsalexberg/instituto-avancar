@@ -83,13 +83,15 @@
         <h2 class="mb-5 text-secondary">Blog</h2>
 
         @foreach ($posts as $post)
-          <div class="media mb-4">
-            <img src="{{ $post->image }}" class="align-self-center mr-3">
-            <div class="media-body">
-              <h5 class="mt-0">{{ $post->title }}</h5>
-              <p class="mb-0">{{ $post->summary }}</p>
+          <a href="/blog/{{ $post->id }}-{{ \Illuminate\Support\Str::slug($post->title) }}" class="text-decoration-none text-reset">
+            <div class="media mb-4">
+              <img src="{{ $post->image }}" class="align-self-center mr-3">
+              <div class="media-body">
+                <h5 class="mt-0">{{ $post->title }}</h5>
+                <p class="mb-0">{{ $post->summary }}</p>
+              </div>
             </div>
-          </div>
+          </a>
         @endforeach
 
         <a href="/blog" class="btn btn-outline-primary rounded-pill">Acessar blog</a>
@@ -120,6 +122,15 @@ $('.home-partners').slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   dots: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 </script>
 

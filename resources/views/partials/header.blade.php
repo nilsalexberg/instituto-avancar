@@ -81,7 +81,7 @@
             <li class="nav-item {{ Route::current()->uri == 'parceiros' ? 'active' : '' }}">
               <a class="nav-link" href="/parceiros">Nossos parceiros</a>
             </li>
-            <li class="nav-item {{ Route::current()->uri == 'blog' ? 'active' : '' }}">
+            <li class="nav-item {{ substr(Route::current()->uri, 0, 4) == 'blog' ? 'active' : '' }}">
               <a class="nav-link" href="/blog">Blog</a>
             </li>
             <li class="nav-item">

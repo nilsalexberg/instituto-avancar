@@ -5,19 +5,21 @@
   .dropdown {
     position: initial;
 
-    .dropdown-menu.show {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      top: unset;
-      border: none;
-      border-radius: 0;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      opacity: .9;
-      padding: 16px;
+    @media screen and (min-width: 768px) {
+      .dropdown-menu.show {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        top: unset;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        opacity: .9;
+        padding: 16px;
 
-      .dropdown-item {
-        width: auto;
+        .dropdown-item {
+          width: auto;
+        }
       }
     }
   }
@@ -32,7 +34,12 @@
 
     img {
       position: absolute;
-      bottom: 16px;
+      @media screen and (min-width: 768px) {
+        bottom: 16px;
+      }
+      @media screen and (max-width: 767px) {
+        top: -36px;
+      }
     }
   }
 }
@@ -41,7 +48,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(-98%);
   
   svg {
     height: 70px;
